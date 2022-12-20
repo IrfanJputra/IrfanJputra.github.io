@@ -7937,7 +7937,7 @@ body.template-color-1 {
     @media only screen and (min-width: 1200px) and (max-width: 1599px) {
       .header-wrapper .header-right a.rn-btn {
         font-size: 13px;
-        padding: 17px 19px;
+        padding: 10px 11px;
         line-height: 21px; } }
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
       .header-wrapper .header-right a.rn-btn {
@@ -8113,7 +8113,7 @@ body.template-color-1 {
   display: inline-block; }
   .logo a img {
     transition: 0.3s; 
-    width: 50px;
+    width: 118px;
 }
     @media only screen and (max-width: 767px) {
       .logo a img {
@@ -14642,5 +14642,3 @@ body.white-version {
 
 .white-version .slider-style-6 .cd-headline span {
   color: var(--color-white) !important; }
-
-
