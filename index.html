@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tebak Gambar Kertas Lipat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game">
+        <div id="popupWrong" class="popup">
+            <div class="popup-content">
+                <img src="assets/4.png" alt="Salah" />
+                <p>Jawaban salah, coba lagi!</p>
+                <button onclick="closePopup()">Tutup</button>
+            </div>
+        </div>
+
+        <video autoplay muted loop id="bgVideo">
+            <source src="assets/vid2.mp4" type="video/mp4">
+            Browser kamu tidak mendukung video.
+        </video>
+
+        <div class="options">
+            <div class="option">
+                <div class="label">A</div>
+                <img src="assets/3.png" alt="pilihan1" onclick="checkAnswer(0)" />
+            </div>
+            <div class="option">
+                <div class="label">B</div>
+                <img src="assets/4.png" alt="pilihan2" onclick="checkAnswer(1)" />
+            </div>
+            <div class="option">
+                <div class="label">C</div>
+                <img src="assets/5.png" alt="pilihan3" onclick="checkAnswer(2)" />
+            </div>
+        </div>
+
+        <div class="paper-container" onclick="openPaper()">
+            <div class="paper-left" id="leftFold"></div>
+            <div class="paper-right" id="rightFold"></div>
+            <div class="image-inside" id="hiddenImage"></div>
+
+            <div class="hands">
+                <div class="hand-left" id="handLeft">
+                    <div class="inner-hand-left"></div>
+                </div>
+                <div class="hand-right" id="handRight"></div>
+            </div>
+        </div>
+
+        <div id="result"></div>
+        <img id="correctImage" src="assets/dance.gif" alt="Benar!" class="correct-image" />
+        <audio id="correctSound" src="assets/benar.mp3"></audio>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>function closePopup() {
+            document.getElementById("popupWrong").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
