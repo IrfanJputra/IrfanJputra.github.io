@@ -59,16 +59,19 @@ function checkAnswer(index) {
 
     isAnswerAllowed = false;
 }
-function openFullscreen() {
-    const elem = document.documentElement; // seluruh dokumen
+function startGame() {
+    const elem = document.documentElement;
 
+    // Fullscreen
     if (elem.requestFullscreen) {
         elem.requestFullscreen();
     } else if (elem.webkitRequestFullscreen) {
-        /* Safari */
         elem.webkitRequestFullscreen();
     } else if (elem.msRequestFullscreen) {
-        /* IE11 */
         elem.msRequestFullscreen();
     }
+
+    // Sembunyikan overlay
+    document.getElementById("startOverlay").style.display = "none";
 }
+
