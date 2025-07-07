@@ -59,3 +59,16 @@ function checkAnswer(index) {
 
     isAnswerAllowed = false;
 }
+function openFullscreen() {
+    const elem = document.documentElement; // seluruh dokumen
+
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) {
+        /* Safari */
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+        /* IE11 */
+        elem.msRequestFullscreen();
+    }
+}
